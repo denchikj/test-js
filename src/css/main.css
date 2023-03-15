@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Press';
+    src: url(../Press.ttf);
+  }
+  
+  :root {
+    --yandex-yellow: #ffcc00;
+  }
+  
+  body {
+    background-color: #222;
+    /* font-size: 12px; */
+    font-family: sans-serif;
+    color: white;
+  }
+  
+  .page {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .list {
+    font-family: 'Press';
+    color: var(--yandex-yellow);
+    /* font-size: 2em; */
+  }
+  
+  .thread {
+    display: grid;
+    grid-template-areas: "time city flight";
+    grid-template-columns: auto 1fr 1fr;
+    width: 100%;
+    padding: .5em;
+    border-bottom: 1px solid black;
+  }
+  
+  @media (max-width: 500px){
+    .thread {
+      grid-template-areas: "time city" "time flight";
+      grid-template-columns: auto 1fr;
+    }
+  }
+  
+  .time {
+    grid-area: time;
+  }
+  
+  .city {
+    grid-area: city;
+    padding-left: 2rem;
+  }
+  
+  .flight {
+    grid-area: flight;
+    font-size: .5em;
+    padding: 1rem;
+    padding-left: 2rem;
+  }
+  
+  .airports {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+  }
+  .airports > div {
+    border-radius: .2em;
+    margin: .1em;
+    padding: .3em;
+    cursor: default;
+  }
+  
+  .airports > div:hover {
+    background-color: #333;
+  }
+  
+  .airports > div[data-current-station] {
+    background-color: var(--yandex-yellow);
+    color: black;
+  }
+  /* 
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  } */
+  
+  .direction {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    font-size: 2em;
+  }
+  
+  .direction > div {
+    border-radius: .2em;
+    margin: .1em;
+    padding: .1em;
+    padding-left: .5em;
+    padding-right: .5em;
+    cursor: default;
+  }
+  
+  .direction > div:hover {
+    background-color: #333;
+  }
+  
+  .direction > div[data-current-direction] {
+    background-color: inherit;
+    color: var(--yandex-yellow);
+  }
+  
+  .delay {
+    margin: .1em;
+    padding: .3em;
+  }
+  
+  .delay * {
+    cursor: pointer;
+  }
+  
+  .finder {
+    margin: .2em;
+  }
+  
+  .number {
+    display: inline-block;
+  }
+  
+  .number > input{
+    margin: .2em;
+    padding: .3em;
+    background-color: #181818;
+    color: white;
+    border: none;
+    border-radius: .2em;
+    font-size: 1em;
+  }
+  
+  .search, .show_all {
+    display:inline-block;
+    margin: .2em;
+    padding: .3em;
+    background-color: #333;
+    border-radius: .2em;
+    cursor: pointer;
+  }
+  
+  .search:hover, .show_all:hover {
+    background-color: var(--yandex-yellow);
+    color: black;
+  }

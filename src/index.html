@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Расписание рейсов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <div class="page">
+        <div id="update"></div>
+        <div class="settings">
+            <div class="airports">
+                <div data-station="svo" title="Шереметьево" data-current-station>SVO</div>
+                <div data-station="dme" title="Домодедово">DME</div>
+                <div data-station="vko" title="Внуково">VKO</div>
+            </div>
+        </div>
+        <div class="filters">
+            <div class="direction">
+              <div data-direction="departure" data-current-direction>Вылет</div>
+              <div data-direction="arrival">Прилёт</div>
+            </div>
+            <div class="finder">
+              <div class="number">
+                <input type="text" placeholder="номер рейса">
+              </div>
+              <div class="search">Искать</div>
+              <div class="show_all">Показать все</div>
+            </div>
+          </div>
+        </div>
+        <div class="list"></div>
+      </div>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>
